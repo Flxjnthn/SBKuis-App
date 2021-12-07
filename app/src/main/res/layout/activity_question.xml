@@ -7,6 +7,16 @@
     android:background="@drawable/bg2"
     tools:context=".QuestionActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationZ="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_question_number"
+        tools:srcCompat="@tools:sample/avatars" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,7 +32,7 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/noto_serif"
         android:text="SBKuis"
         android:textColor="@color/orange"
@@ -46,7 +56,7 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/roboto"
         android:text="Question"
@@ -81,13 +91,13 @@
         android:id="@+id/textView10"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/roboto"
         android:text="Loerm Ipsiumqn cieniocq ceob2ci2eicp wwipehioi woehuecoiwec ?"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_question_number" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_choice1"
