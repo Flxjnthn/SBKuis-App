@@ -1,14 +1,17 @@
 package com.example.uasproject.view.LoginView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.uasproject.R;
+import com.example.uasproject.helper.SharedPreferenceHelper;
 import com.example.uasproject.view.HomePageActivity;
 import com.example.uasproject.view.RegisterView.RegisterActivity;
 import com.google.android.material.textfield.TextInputLayout;
@@ -18,6 +21,8 @@ public class LoginActivity extends AppCompatActivity {
     private TextInputLayout textinput_login_email, textinput_login_password;
     private Button button_login;
     private TextView textview_register_here;
+    private LoginViewModel loginViewModel;
+    private SharedPreferenceHelper helper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +40,8 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
             }
         });
+        loginViewModel = new ViewModelProvider(this).get(LoginViewModel.class);
+        helper = SharedPreferenceHelper.getInstance(LoginActivity.this);
 
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +64,16 @@ public class LoginActivity extends AppCompatActivity {
                         textinput_login_password.setError("");
                     }
                     startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
+//                    loginViewModel.login(email, password).observe(LoginActivity.this, tokenResponse -> {
+//                        if (tokenResponse != null){
+//                            helper.saveAccessToken(tokenResponse.getAuthorization());
+//                            startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
+//                            Toast.makeText(LoginActivity.this,"Login Success", Toast.LENGTH_SHORT).show();
+//                        }else{
+//                            Toast.makeText(LoginActivity.this,"Login Failed", Toast.LENGTH_SHORT).show();
+//                        }
+//                    });
+
                 }
 
             }

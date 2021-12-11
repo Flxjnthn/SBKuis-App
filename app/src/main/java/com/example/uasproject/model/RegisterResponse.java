@@ -8,16 +8,16 @@ public class RegisterResponse implements Parcelable {
     private String name;
     private String email;
     private String password;
-    private String password_confirmation;
+
 
     protected RegisterResponse(Parcel in) {
         name = in.readString();
         email = in.readString();
         password = in.readString();
-        password_confirmation = in.readString();
+
     }
 
-    public static final Parcelable.Creator<RegisterResponse> CREATOR = new Parcelable.Creator<RegisterResponse>() {
+    public static final Creator<RegisterResponse> CREATOR = new Creator<RegisterResponse>() {
         @Override
         public RegisterResponse createFromParcel(Parcel in) {
             return new RegisterResponse(in);
@@ -58,13 +58,7 @@ public class RegisterResponse implements Parcelable {
         this.password = password;
     }
 
-    public String getPassword_confirmation() {
-        return password_confirmation;
-    }
 
-    public void setPassword_confirmation(String password_confirmation) {
-        this.password_confirmation = password_confirmation;
-    }
 
     @Override
     public int describeContents() {
@@ -76,6 +70,6 @@ public class RegisterResponse implements Parcelable {
         parcel.writeString(name);
         parcel.writeString(email);
         parcel.writeString(password);
-        parcel.writeString(password_confirmation);
+
     }
 }
