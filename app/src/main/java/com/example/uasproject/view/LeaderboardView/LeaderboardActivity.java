@@ -1,4 +1,4 @@
-package com.example.uasproject;
+package com.example.uasproject.view.LeaderboardView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -8,6 +8,8 @@ import android.graphics.ImageDecoder;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.example.uasproject.R;
 
 public class LeaderboardActivity extends AppCompatActivity {
 

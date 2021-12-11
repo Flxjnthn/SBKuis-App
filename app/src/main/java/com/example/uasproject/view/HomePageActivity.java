@@ -1,4 +1,4 @@
-package com.example.uasproject;
+package com.example.uasproject.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -7,6 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.example.uasproject.R;
+import com.example.uasproject.view.LeaderboardView.LeaderboardActivity;
 
 public class HomePageActivity extends AppCompatActivity {
 

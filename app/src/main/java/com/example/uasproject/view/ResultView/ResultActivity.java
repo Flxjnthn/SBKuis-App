@@ -1,4 +1,4 @@
-package com.example.uasproject;
+package com.example.uasproject.view.ResultView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.uasproject.R;
+import com.example.uasproject.view.HomePageActivity;
 
 public class ResultActivity extends AppCompatActivity {
 

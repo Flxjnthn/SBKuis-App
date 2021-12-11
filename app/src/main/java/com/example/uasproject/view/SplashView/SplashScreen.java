@@ -1,10 +1,13 @@
-package com.example.uasproject;
+package com.example.uasproject.view.SplashView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.uasproject.R;
+import com.example.uasproject.view.LoginView.LoginActivity;
 
 public class SplashScreen extends AppCompatActivity {
 

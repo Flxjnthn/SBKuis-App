@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UASProject">
         <activity
-            android:name=".SplashScreen"
+            android:name=".view.SplashView.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,22 +19,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LeaderboardActivity"
+            android:name=".view.LeaderboardView.LeaderboardActivity"
             android:exported="true" />
         <activity
-            android:name=".ResultActivity"
+            android:name=".view.ResultView.ResultActivity"
             android:exported="true" />
         <activity
-            android:name=".QuestionActivity"
+            android:name=".view.QuestionView.QuestionActivity"
             android:exported="true" />
         <activity
-            android:name=".HomePageActivity"
+            android:name=".view.HomePageActivity"
             android:exported="true" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".view.RegisterView.RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".view.LoginView.LoginActivity"
             android:exported="true" />
 
         <meta-data

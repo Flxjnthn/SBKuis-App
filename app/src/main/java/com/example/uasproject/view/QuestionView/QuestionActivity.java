@@ -1,8 +1,10 @@
-package com.example.uasproject;
+package com.example.uasproject.view.QuestionView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.uasproject.R;
 
 public class QuestionActivity extends AppCompatActivity {
 

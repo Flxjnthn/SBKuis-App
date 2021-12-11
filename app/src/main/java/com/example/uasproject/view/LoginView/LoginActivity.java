@@ -1,4 +1,4 @@
-package com.example.uasproject;
+package com.example.uasproject.view.LoginView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.uasproject.R;
+import com.example.uasproject.view.RegisterView.RegisterActivity;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
