@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.uasproject.R;
+import com.example.uasproject.view.HomePageActivity;
 import com.example.uasproject.view.RegisterView.RegisterActivity;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -55,7 +56,9 @@ public class LoginActivity extends AppCompatActivity {
                     } else {
                         textinput_login_password.setError("");
                     }
+                    startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
                 }
+
             }
         });
 

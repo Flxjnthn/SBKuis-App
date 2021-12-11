@@ -2,12 +2,15 @@ package com.example.uasproject.view.RegisterView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.uasproject.R;
+import com.example.uasproject.view.LoginView.LoginActivity;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -59,6 +62,8 @@ public class RegisterActivity extends AppCompatActivity {
                         textinput_register_password.setError("");
                     }
                 }
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+
             }
         });
 
