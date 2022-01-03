@@ -14,7 +14,7 @@ import com.example.uasproject.view.ResultView.ResultActivity;
 
 public class QuestionActivity extends AppCompatActivity {
 
-    TextView textView_question_number;
+    TextView textView_question_number,textView_choice1,textView_choice2,textView_choice3;
     Button button_next_question;
     int no = 1;
     @Override
@@ -24,6 +24,9 @@ public class QuestionActivity extends AppCompatActivity {
 
 
         textView_question_number = findViewById(R.id.textView_question_number);
+        textView_choice1 = findViewById(R.id.textView_choice1);
+        textView_choice2 = findViewById(R.id.textView_choice2);
+        textView_choice3 = findViewById(R.id.textView_choice3);
         button_next_question = findViewById(R.id.button_next_question);
 
         button_next_question.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +37,9 @@ public class QuestionActivity extends AppCompatActivity {
                 }else{
                     no++;
                     textView_question_number.setText(String.valueOf(no));
+                    textView_choice1.setText("Samuel");
+                    textView_choice2.setText("James");
+                    textView_choice3.setText("Brody");
                 }
 
 
