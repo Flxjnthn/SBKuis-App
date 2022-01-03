@@ -63,16 +63,16 @@ public class LoginActivity extends AppCompatActivity {
                     } else {
                         textinput_login_password.setError("");
                     }
-                    startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
-//                    loginViewModel.login(email, password).observe(LoginActivity.this, tokenResponse -> {
-//                        if (tokenResponse != null){
-//                            helper.saveAccessToken(tokenResponse.getAuthorization());
-//                            startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
-//                            Toast.makeText(LoginActivity.this,"Login Success", Toast.LENGTH_SHORT).show();
-//                        }else{
-//                            Toast.makeText(LoginActivity.this,"Login Failed", Toast.LENGTH_SHORT).show();
-//                        }
-//                    });
+
+                    loginViewModel.login(email, password).observe(LoginActivity.this, tokenResponse -> {
+                        if (tokenResponse != null){
+                            helper.saveAccessToken(tokenResponse.getAuthorization());
+                            startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
+                            Toast.makeText(LoginActivity.this,"Login Success", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(LoginActivity.this,"Login Failed", Toast.LENGTH_SHORT).show();
+                        }
+                    });
 
                 }
 
