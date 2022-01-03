@@ -10,6 +10,7 @@ import android.widget.ImageView;
 
 import com.example.uasproject.R;
 import com.example.uasproject.view.LeaderboardView.LeaderboardActivity;
+import com.example.uasproject.view.QuestionView.QuestionActivity;
 
 public class HomePageActivity extends AppCompatActivity {
 
@@ -30,6 +31,27 @@ public class HomePageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), LeaderboardActivity.class));
+            }
+        });
+
+        cardView_easy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), QuestionActivity.class));
+            }
+        });
+
+        cardView_medium.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), QuestionActivity.class));
+            }
+        });
+
+        cardView_hard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), QuestionActivity.class));
             }
         });
     }
