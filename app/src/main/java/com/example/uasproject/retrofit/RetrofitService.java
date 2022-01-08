@@ -1,6 +1,7 @@
 package com.example.uasproject.retrofit;
 
 import com.example.uasproject.helper.Const;
+import com.example.uasproject.model.Question;
 import com.example.uasproject.model.RegisterResponse;
 import com.example.uasproject.model.TokenResponse;
 
@@ -57,6 +58,9 @@ public class RetrofitService {
     public Call<RegisterResponse> register(String name, String email, String password){
         return api.register(name,email,password);
     }
+    public Call<Question> getQuestions(){return api.getQuestion();}
+
+    public Call<Question> getCourseDetail(String code) {return api.getQuestionDetail(code);}
 
 
 }

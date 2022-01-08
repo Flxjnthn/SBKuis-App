@@ -40,10 +40,12 @@ public class AuthRepository {
                         if(response.body() != null){
                             Log.d(TAG, "onResponse: "+response.body().getAccess_token());
                             tokenResponse.postValue(response.body());
+                            Log.d(TAG, "Test");
                         }
                     }
                 }else {
                     Log.d(TAG, "onResponse: "+response.code());
+
                 }
             }
 

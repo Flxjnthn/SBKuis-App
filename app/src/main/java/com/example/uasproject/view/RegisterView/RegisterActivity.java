@@ -37,51 +37,31 @@ public class RegisterActivity extends AppCompatActivity {
         button_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = textinput_register_username.getEditText().getText().toString().trim();
-                String email = textinput_register_email.getEditText().getText().toString().trim();
-                String password = textinput_register_password.getEditText().getText().toString().trim();
+                if (!textinput_register_username.getEditText().getText().toString().isEmpty()
+                        && !textinput_register_email.getEditText().getText().toString().isEmpty()
+                        && !textinput_register_password.getEditText().getText().toString().isEmpty() ){
+                    String username = textinput_register_username.getEditText().getText().toString().trim();
+                    String email = textinput_register_email.getEditText().getText().toString().trim();
+                    String password = textinput_register_password.getEditText().getText().toString().trim();
 
+                    registerViewModel.register(username, email, password).observe(RegisterActivity.this, registerResponse -> {
+                        if (registerResponse != null) {
+                            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                            Toast.makeText(RegisterActivity.this, "Register Success", Toast.LENGTH_SHORT).show();
 
-                registerViewModel.register(username, email, password).observe(RegisterActivity.this, registerResponse -> {
-                    if (registerResponse != null){
+                        } else {
+                            Toast.makeText(RegisterActivity.this, "Register Failed", Toast.LENGTH_SHORT).show();
 
-                        Toast.makeText(RegisterActivity.this, "Register Success", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                    }else{
-                        Toast.makeText(RegisterActivity.this, "Register Failed", Toast.LENGTH_SHORT).show();
-
-                    }
-                });
-
-                            if (username.isEmpty()) {
-                                textinput_register_username.setError("Silahkan isi kolom username");
-                                return;
-                            } else {
-                                textinput_register_username.setError("");
-                            }
-
-                            if (email.isEmpty()) {
-                                textinput_register_email.setError("Silahkan isi kolom email");
-                                return;
-                            } else {
-                                textinput_register_email.setError("");
-                            }
-
-                            if (password.isEmpty()) {
-                                textinput_register_password.setError("Silahkan isi kolom password");
-                                return;
-                            } else {
-                                if (password.length() < 8 || password.length() > 20) {
-                                    textinput_register_password.setError("Kata sandi harus terdiri dari 8 sampai 20 karakter");
-                                } else {
-                                    textinput_register_password.setError("");
-                                }
-                            }
-
-
-
+                        }
+                    });
+                }else{
+                    Toast.makeText(RegisterActivity.this, "All field must not empty", Toast.LENGTH_SHORT).show();
+                }
             }
-        });
 
+        });
     }
 }
+
+
+
