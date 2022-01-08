@@ -59,15 +59,17 @@ public class Question implements Parcelable {
     }
 
     public static class Questions {
+        private int ID_question;
         private String question;
         private String quest_image;
         private int diff_id;
 
-        public Questions(String question, String quest_image, int diff_id) {
+        public Questions(String question, String quest_image, int diff_id, int ID_question) {
 
             this.question = question;
             this.quest_image = quest_image;
             this.diff_id = diff_id;
+            this.ID_question = ID_question;
 
         }
 
@@ -92,14 +94,20 @@ public class Question implements Parcelable {
             this.quest_image = quest_image;
         }
 
-
-
         public int getDiff_id() {
             return diff_id;
         }
 
         public void setDiff_id(int diff_id) {
             this.diff_id = diff_id;
+        }
+
+        public int getID_question() {
+            return ID_question;
+        }
+
+        public void setID_question(int ID_question) {
+            this.ID_question = ID_question;
         }
 
 

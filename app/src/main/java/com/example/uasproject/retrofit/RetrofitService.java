@@ -1,8 +1,11 @@
 package com.example.uasproject.retrofit;
 
 import com.example.uasproject.helper.Const;
+import com.example.uasproject.model.Answer;
+import com.example.uasproject.model.Difficult;
 import com.example.uasproject.model.Question;
 import com.example.uasproject.model.RegisterResponse;
+import com.example.uasproject.model.Result;
 import com.example.uasproject.model.TokenResponse;
 
 import okhttp3.OkHttpClient;
@@ -59,8 +62,16 @@ public class RetrofitService {
         return api.register(name,email,password);
     }
     public Call<Question> getQuestions(){return api.getQuestion();}
-
     public Call<Question> getCourseDetail(String code) {return api.getQuestionDetail(code);}
+
+    public Call<Answer> getAnswers(){return api.getAnswer();}
+    public Call<Answer> getAnswerDetail(String code) {return api.getAnswerDetail(code);}
+
+    public Call<Difficult> getDifficults(){return api.getDifficult();}
+    public Call<Difficult> getDifficultDetail(String code) {return api.getDifficultDetail(code);}
+
+    public Call<Result> getResults(){return api.getResult();}
+    public Call<Result> getResultDetail(String code) {return api.getResultDetail(code);}
 
 
 }
