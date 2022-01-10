@@ -43,6 +43,8 @@ public class RegisterActivity extends AppCompatActivity {
                     String username = textinput_register_username.getEditText().getText().toString().trim();
                     String email = textinput_register_email.getEditText().getText().toString().trim();
                     String password = textinput_register_password.getEditText().getText().toString().trim();
+                    Toast.makeText(RegisterActivity.this, "Register Success", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
 
                     registerViewModel.register(username, email, password).observe(RegisterActivity.this, registerResponse -> {
                         if (registerResponse != null) {

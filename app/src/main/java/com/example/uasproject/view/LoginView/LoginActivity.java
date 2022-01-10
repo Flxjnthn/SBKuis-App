@@ -63,6 +63,8 @@ public class LoginActivity extends AppCompatActivity {
                     } else {
                         textinput_login_password.setError("");
                     }
+                    Toast.makeText(LoginActivity.this,"Login Success", Toast.LENGTH_SHORT).show();
+
                     startActivity(new Intent(getApplicationContext(), HomePageActivity.class));
                     loginViewModel.login(email, password).observe(LoginActivity.this, tokenResponse -> {
                         if (tokenResponse != null){

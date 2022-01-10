@@ -101,7 +101,7 @@
         app:layout_constraintTop_toTopOf="@+id/questionProgress" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textViewQuestion"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -121,9 +121,9 @@
         app:cardCornerRadius="12dp"
         app:cardElevation="10dp"
         app:cardMaxElevation="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10">
+        app:layout_constraintEnd_toEndOf="@+id/textViewQuestion"
+        app:layout_constraintStart_toStartOf="@+id/textViewQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/textViewQuestion">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
